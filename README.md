@@ -1,50 +1,121 @@
-# Welcome to your Expo app 👋
+# 🌿 BioSacha — Frontend Móvil
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicación móvil para el registro y exploración de fauna autóctona en reservas naturales de Argentina. Desarrollada con **React Native + Expo** como parte de un proyecto académico/profesional.
 
-## Get started
+---
 
-1. Install dependencies
+## 📱 Capturas de pantalla
 
-   ```bash
-   npm install
-   ```
+> La app integra pantallas de especies, quizzes, mapa interactivo, expediciones en reservas y colección de cartas.
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 🚀 Stack tecnológico
 
-In the output, you'll find options to open the app in a
+| Tecnología | Uso |
+|---|---|
+| [Expo SDK 54](https://expo.dev) | Framework base |
+| [React Native 0.81](https://reactnative.dev) | Motor de UI |
+| [Expo Router 6](https://expo.github.io/router) | Navegación basada en archivos |
+| [NativeWind 4](https://www.nativewind.dev) | Estilos con Tailwind CSS |
+| [expo-audio](https://docs.expo.dev/versions/latest/sdk/audio/) | Reproducción de sonidos de especies |
+| [expo-image](https://docs.expo.dev/versions/latest/sdk/image/) | Carga optimizada de imágenes |
+| [expo-speech](https://docs.expo.dev/versions/latest/sdk/speech/) | Narración de fichas de especies |
+| [react-native-safe-area-context](https://github.com/th3rdwave/react-native-safe-area-context) | Manejo de insets |
+| TypeScript | Tipado estático |
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🗂️ Arquitectura
 
-## Get a fresh project
+El proyecto sigue una **arquitectura modular por features**:
 
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+src/
+  features/
+    species/        # Catálogo de especies + detalle + audio
+    quiz/           # Quizzes de identificación
+    reserve/        # Reservas, expediciones, código QR
+    dex/            # Colección de cartas por reserva
+    sighting/       # Registro de avistajes
+    profile/        # Perfil de usuario
+    home/           # Pantalla principal
+  shared/
+    components/     # Componentes reutilizables (badges, cards, etc.)
+    constants/      # Paleta de colores y tema
+app/                # Rutas Expo Router (file-based routing)
+  (tabs)/           # Navegación principal con bottom tabs
+    species/        # Stack anidado: lista → detalle
+    dex/            # Stack anidado: colección → reserva
+    map.tsx
+    quizzes.tsx
+    profile.tsx
+  reserve/[id]/     # Ficha, unirse (QR/código), expedición activa
+  quiz/[id]/        # Intro + pantalla de juego
+  sighting/new.tsx
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## ✨ Funcionalidades principales
 
-To learn more about developing your project with Expo, look at the following resources:
+- **Catálogo de especies** con fichas detalladas, audio de sonidos y narración por voz
+- **Quiz interactivo** de identificación de fauna con sistema de puntos y mascota motivacional
+- **Mapa de reservas** con bottom sheet mostrando reserva seleccionada
+- **Flujo de expedición**: Ficha de reserva → Escaneo de QR o código manual → Dashboard de expedición activa
+- **Colección de cartas** (tipo Pokédex) organizada por reserva
+- **Registro de avistajes** con selección de ubicación
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## 🛠️ Instalación y ejecución
 
-Join our community of developers creating universal apps.
+```bash
+# Clonar el repositorio
+git clone https://github.com/TU_USUARIO/biosacha-frontend.git
+cd biosacha-frontend
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+# Instalar dependencias
+npm install
+
+# Iniciar el servidor de desarrollo
+npm run start
+```
+
+Luego escanear el QR con la app **Expo Go** desde tu celular (Android/iOS).
+
+---
+
+## 📋 Requisitos
+
+- Node.js 18+
+- npm 9+
+- Expo Go (en el celular) o un emulador Android/iOS
+
+---
+
+## 🗺️ Rutas de navegación
+
+```
+/(tabs)/species        → Catálogo de especies
+/(tabs)/species/[id]   → Detalle de especie (audio + narración)
+/(tabs)/quizzes        → Menú de quizzes
+/quiz/[id]             → Intro del quiz
+/quiz/[id]/play        → Juego de preguntas
+/(tabs)/map            → Mapa de reservas
+/reserve/[id]          → Ficha completa de la reserva
+/reserve/[id]/join     → Unirse con QR o código
+/reserve/[id]/expedition → Expedición activa (EN VIVO)
+/(tabs)/dex            → Mi colección de cartas
+/(tabs)/dex/[reserveId] → Colección de una reserva
+/sighting/new          → Nuevo avistaje
+/(tabs)/profile        → Perfil de usuario
+```
+
+---
+
+## 👤 Autor
+
+Desarrollado por **[Tu Nombre]** · [LinkedIn](https://linkedin.com) · [GitHub](https://github.com)
+
+Proyecto académico — Universidad Nacional de Tucumán

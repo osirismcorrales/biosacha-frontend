@@ -1,35 +1,36 @@
 import { Tabs } from 'expo-router';
-import React from 'react';
-
-import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Colors } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/use-color-scheme';
+import { Ionicons } from '@expo/vector-icons';
+import { HapticTab } from '@shared/components/haptic-tab';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { APP_COLORS } from '@shared/constants/theme';
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
+  const insets = useSafeAreaInsets();
+  
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarActiveTintColor: APP_COLORS.secondary,
+        tabBarInactiveTintColor: APP_COLORS.disabled,
         headerShown: false,
         tabBarButton: HapticTab,
+        tabBarStyle: {
+          backgroundColor: APP_COLORS.surface,
+          borderTopColor: APP_COLORS.border,
+          borderTopWidth: 1,
+          height: 60 + insets.bottom,
+          paddingBottom: insets.bottom,
+          paddingTop: 8,
+        },
+        tabBarLabelStyle: { fontSize: 10, fontFamily: 'PlusJakartaSans_500Medium' },
       }}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
-        }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
-        }}
-      />
+      <Tabs.Screen name="species" options={{ title: 'Especies', tabBarIcon: ({ color, focused }) => <Ionicons name={focused ? 'leaf' : 'leaf-outline'} size={24} color={color} /> }} />
+      <Tabs.Screen name="quizzes" options={{ title: 'Quizzes', tabBarIcon: ({ color, focused }) => <Ionicons name={focused ? 'help-circle' : 'help-circle-outline'} size={24} color={color} /> }} />
+      <Tabs.Screen name="map" options={{ title: 'Mapa', tabBarIcon: ({ color, focused }) => <Ionicons name={focused ? 'map' : 'map-outline'} size={24} color={color} /> }} />
+      <Tabs.Screen name="dex" options={{ title: 'Colección', tabBarIcon: ({ color, focused }) => <Ionicons name={focused ? 'albums' : 'albums-outline'} size={24} color={color} /> }} />
+      <Tabs.Screen name="profile" options={{ title: 'Perfil', tabBarIcon: ({ color, focused }) => <Ionicons name={focused ? 'person' : 'person-outline'} size={24} color={color} /> }} />
+      <Tabs.Screen name="index" options={{ href: null }} />
+      <Tabs.Screen name="sightings" options={{ href: null }} />
     </Tabs>
   );
 }

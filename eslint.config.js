@@ -6,5 +6,6 @@ module.exports = defineConfig([
   expoConfig,
   {
     ignores: ['dist/*'],
+    files: ['**/*.{js,jsx,ts,tsx}'],
   },
 ]);
