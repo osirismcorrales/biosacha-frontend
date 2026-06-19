@@ -33,8 +33,6 @@ NativeWind
 
 <img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/0716009a-4a37-4448-8f37-5606eb32973e" />
 
-<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/c939fd99-b852-4c6c-a458-ea0aed2dca0a" />
-
 <img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/a214e3ef-5e88-4d8a-8545-80b6a2f6aa6b" />
 
 ### Estado del proyecto
