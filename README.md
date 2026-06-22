@@ -29,8 +29,6 @@ NativeWind
 
 <img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/439107aa-d772-46e2-a72f-e9f888cf83a3" />
 
-<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/012d07d3-dafc-4ada-9c8c-7adddf625298" />
-
 <img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/0716009a-4a37-4448-8f37-5606eb32973e" />
 
 <img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/a214e3ef-5e88-4d8a-8545-80b6a2f6aa6b" />
