@@ -23,15 +23,16 @@ Expo Router
 NativeWind
 ### Capturas
 
-<img width="738" height="1600" alt="WhatsApp Image 2026-06-18 at 21 29 10" src="https://github.com/user-attachments/assets/0f1ce5e6-e415-43f2-b071-a2e6150771e5" />
+<img width="352" height="760" alt="image" src="https://github.com/user-attachments/assets/c5cb1587-a772-42ea-a63a-03fb5e658d82" />
 
-<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/2dd5fa36-40c7-4951-9c52-3cfba8e6b66f" />
+<img width="356" height="761" alt="image" src="https://github.com/user-attachments/assets/f8606d13-4f39-4560-b805-4ca4982c99ab" />
 
-<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/439107aa-d772-46e2-a72f-e9f888cf83a3" />
+<img width="352" height="764" alt="image" src="https://github.com/user-attachments/assets/4dedbb6c-f348-49e2-8d2e-7cc2ea3bbd92" />
 
-<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/0716009a-4a37-4448-8f37-5606eb32973e" />
+<img width="354" height="759" alt="image" src="https://github.com/user-attachments/assets/c810dafc-6747-41bc-a2fb-3ecc23b4d30e" />
 
-<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/a214e3ef-5e88-4d8a-8545-80b6a2f6aa6b" />
+<img width="359" height="759" alt="image" src="https://github.com/user-attachments/assets/3f267995-58d8-4287-bfee-eece07a6c3b3" />
+
 
 ### Estado del proyecto
 
